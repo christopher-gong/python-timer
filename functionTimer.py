@@ -27,3 +27,7 @@ class FunctionTimer:
             writer.writerow(["function", "total time", "times called", "avg time per call"])
             for key, val in self.info.items():
                 writer.writerow([key] + val + [val[0] / val[1]])
+
+    def clear(self):
+        self.info = dict()
+        self.curr = dict()
